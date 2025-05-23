@@ -34,5 +34,5 @@ Get the latest version from a GitHub package.
         with:
           token: ${{ secrets.PACKAGE_READER_PAT }}
           owner: element-hq
-          repository: matrix-authentication-service
+          package_name: matrix-authentication-service
 ```
