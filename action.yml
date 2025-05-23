@@ -79,7 +79,7 @@ runs:
   - name: Print Version
     id: print
     run: |
-      echo "Latest version of ${{ inputs.owner }}/${{ inputs.package_name }} is ${{ steps.get_version.outputs.version }}"
+      echo "Latest version of ${{ inputs.owner }}/${{ inputs.package_name }} is ${{ steps.get_version.outputs.version }} with tag ${{ steps.get_version.outputs.tag }}"
     shell: bash
 branding:
   color: blue
