@@ -15,8 +15,8 @@ Get the latest version from a GitHub package.
 | owner | The owner of the package. | yes |  |
 | package_name | The name of the package to query. | Yes |  |
 | package_type | The type of package to query (one of: npm, maven, rubygems, docker, nuget, container) | container |
-| minimum_version | The minimum version number to accept, e.g. 2.0.0. | No | None |
-| maximum_version | The maximum version number to accept, e.g. 2.99.99. | No | None |
+| greater_equal_version | The minimum version to accept, e.g. 2.0.0. | No | None |
+| less_than_version | The version to accept versions less than, e.g. 3.0.0. | No | None |
 
 ## Outputs
 
@@ -30,7 +30,7 @@ Get the latest version from a GitHub package.
 ```yaml
       - name: Get Latest Matrix Authentication Service Version
         id: version
-        uses: joepitt91/action-version-from-github-package@v1
+        uses: joepitt91/action-version-from-github-package@v2
         with:
           token: ${{ secrets.PACKAGE_READER_PAT }}
           owner: element-hq
