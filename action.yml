@@ -36,10 +36,6 @@ outputs:
 runs:
   using: composite
   steps:
-  - name: Install Dependencies
-    id: dependencies
-    run: pip3 install --quiet --upgrade -r ${{ github.action_path }}/requirements.txt
-    shell: bash
   - name: Get Latest Version
     id: get_version
     env:
