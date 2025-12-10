@@ -49,6 +49,11 @@ runs:
     shell: python
     run: |
       from os import getenv
+      from os.path import abspath, join
+      import sys
+
+      sys.path.insert(1, abspath(join(getenv("GITHUB_ACTION_PATH", "."), "lib")))
+
       from get_latest_version.github import get_latest_version_from_package
       from get_latest_version.functions import clean_version
       from semver import Version
